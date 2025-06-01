@@ -11,29 +11,29 @@ public class FlashcardApp extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Set background color
+
         JPanel mainPanel = new JPanel();
         mainPanel.setBackground(new Color(135, 206, 235)); // Sky blue background
-        mainPanel.setLayout(null); // Using null layout for absolute positioning
+        mainPanel.setLayout(null);
 
-        // Create cards panel with grid
+
         JPanel cardsPanel = new JPanel(new GridLayout(2, 2, 10, 10));
         cardsPanel.setBackground(new Color(135, 206, 235));
         cardsPanel.setBounds(20, 20, 540, 280);
 
-        // Create the four subject cards
+
         JPanel mlCard = createCard("Machine Learning", new Color(255, 119, 99));  // Coral
         JPanel cyberCard = createCard("Cyber Security", new Color(30, 144, 255)); // Bright blue
         JPanel csCard = createCard("CS Research", new Color(50, 205, 50));        // Bright green
         JPanel compCard = createCard("Competitive Pro...", new Color(147, 112, 219)); // Purple
 
-        // Add cards to the grid
+
         cardsPanel.add(mlCard);
         cardsPanel.add(cyberCard);
         cardsPanel.add(csCard);
         cardsPanel.add(compCard);
 
-        // Create floating action button (FAB)
+
         JButton fabButton = new JButton("+");
         fabButton.setFont(new Font("Arial", Font.BOLD, 24));
         fabButton.setForeground(Color.WHITE);
@@ -42,7 +42,7 @@ public class FlashcardApp extends JFrame {
         fabButton.setFocusPainted(false);
         fabButton.setBorder(new EmptyBorder(0, 0, 0, 0));
 
-        // Make FAB round
+
         fabButton.setUI(new BasicButtonUI() {
             @Override
             public void paint(Graphics g, JComponent c) {
@@ -64,14 +64,14 @@ public class FlashcardApp extends JFrame {
             }
         });
 
-        // Add components to main panel
+
         mainPanel.add(cardsPanel);
         mainPanel.add(fabButton);
 
-        // Add main panel to frame
+
         add(mainPanel);
 
-        // Custom window decoration
+
         setUndecorated(true);
         JPanel titleBar = createTitleBar();
         mainPanel.add(titleBar);
@@ -88,7 +88,6 @@ public class FlashcardApp extends JFrame {
 
         card.add(titleLabel);
 
-        // Add hover effect
         card.addMouseListener(new MouseAdapter() {
             public void mouseEntered(MouseEvent e) {
                 card.setBackground(makeTransparent(bgColor, 0.9f));
@@ -107,7 +106,7 @@ public class FlashcardApp extends JFrame {
         titleBar.setBackground(Color.WHITE);
         titleBar.setBounds(0, 0, getWidth(), 30);
 
-        // App title and icon
+
         JPanel leftSection = new JPanel(new FlowLayout(FlowLayout.LEFT, 5, 3));
         leftSection.setBackground(Color.WHITE);
         JLabel iconLabel = new JLabel("□");
@@ -115,7 +114,7 @@ public class FlashcardApp extends JFrame {
         leftSection.add(iconLabel);
         leftSection.add(titleLabel);
 
-        // Window controls
+
         JPanel controls = new JPanel(new FlowLayout(FlowLayout.RIGHT, 0, 0));
         controls.setBackground(Color.WHITE);
 
@@ -137,7 +136,7 @@ public class FlashcardApp extends JFrame {
         titleBar.add(leftSection, BorderLayout.WEST);
         titleBar.add(controls, BorderLayout.EAST);
 
-        // Make window draggable
+
         MouseAdapter ma = new MouseAdapter() {
             private int initialX;
             private int initialY;
