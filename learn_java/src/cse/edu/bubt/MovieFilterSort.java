@@ -1,4 +1,4 @@
-
+package cse.edu.bubt ;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -29,6 +29,8 @@ public class MovieFilterSort {
 
 
         ArrayList<Movie> movies = new ArrayList<>();
+        // create a Arraylist called movies ;
+
 
 
         movies.add(new Movie("John Wick", "Action", 8.5));

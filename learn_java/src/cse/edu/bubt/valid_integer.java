@@ -12,7 +12,7 @@ public class valid_integer {
 
            String line = sc.nextLine() ; // took the whole string
 
-           String[] transactions = line.split("\\s+") ; // this creates your array of strings
+           String[] transactions = line.split("\\s+") ; // this creates array of strings
 
            ArrayList<Integer> number_list = new ArrayList<>() ;
 

@@ -10,13 +10,16 @@ public class StringNormalizer {
 
         System.out.print("Enter a string: ");
 
-        String s = sc.nextLine();
+        String s = sc.nextLine();  // the string input
 
 
         s = s.trim().replaceAll("\\s+", " ");
 
+        // s.trim() removes leading and trailing spaces from string ;
+        //  replaceALL("\\s+") replace 1+ spaces between words with exactly one space
 
-        String[] words = s.split(" ");
+
+        String[] words = s.split(" ");  // split string in words  ;
 
 
         StringBuilder normalizedString = new StringBuilder();
@@ -26,7 +29,7 @@ public class StringNormalizer {
             if (word.length() > 0) {
 
                 String capitalizedWord = word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase();
-
+                                    // capitalize first char of the word . + takes the res of the word and lowercase it
                 normalizedString.append(capitalizedWord).append(" ");
 
             }
@@ -34,6 +37,7 @@ public class StringNormalizer {
 
 
         String result = normalizedString.toString().trim();
+        // convert stringbuilder to string and trim extra space ;
 
         System.out.println("Normalized String: \"" + result + "\"");
 

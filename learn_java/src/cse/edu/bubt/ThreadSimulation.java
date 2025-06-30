@@ -10,7 +10,7 @@ public class ThreadSimulation {
 
 
     public static final List<Integer> shared_list = new ArrayList<>();
-    // sharedlist to store generated numbers ;
+    // array_list to store generated numbers ;
 
     public static boolean running = true ;
 
