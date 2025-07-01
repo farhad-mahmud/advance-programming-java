@@ -47,6 +47,7 @@ class Pair<K, V> {
             K temp = key;
             key = (K) value;
             value = (V) temp;
+
             System.out.println("Swapped successfully!");
         } else {
             System.out.println("Cannot swap: Different types.");
