@@ -58,6 +58,7 @@ class Pair<K, V> {
     public void display() {
         System.out.println("Key: " + key + ", Value: " + value);
     }
+
 }
 
 public class Generic {

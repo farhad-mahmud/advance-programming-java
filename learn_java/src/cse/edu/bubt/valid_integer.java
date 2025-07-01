@@ -16,11 +16,13 @@ public class valid_integer {
 
            ArrayList<Integer> number_list = new ArrayList<>() ;
 
-
            for(String t : transactions){
                 try{
 
                     int num = Integer.parseInt(t) ;
+
+                    // converts each string to int and throws exception at the same time if invalid
+
                     number_list.add(num) ;   // store valid integers in arraylist called number_list ;
 
                 }

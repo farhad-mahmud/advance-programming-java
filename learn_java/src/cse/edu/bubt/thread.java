@@ -1,20 +1,42 @@
 package cse.edu.bubt;
 
-// creating thread by extending the thread class
 
-class example1 extends Thread {
+class my_thread extends Thread {
 
-       public void run() {
+       public void run(){
 
-           System.out.println("Thread is running") ;
+           for(int i=1;i<=5;i++){
 
+               System.out.println(" my Thread ");
+
+               try{
+                    Thread.sleep(5000) ;
+               }
+               catch(InterruptedException e){
+                    e.printStackTrace() ;
+               }
+           }
        }
-
-public static void main(String args[]) {
-
-    example1 t1 = new example1();
-    // t1 is a object of example1 class who extended the thread class
-    t1.start();
 }
 
+public class thread {
+      public static void main(String[] args) {
+
+          my_thread t1 = new my_thread() ;
+          t1.start() ;
+
+          for(int i=1;i<=5;i++){
+
+              System.out.println("main Thread ");
+
+              try{
+                   Thread.sleep(5000) ;
+
+              }
+              catch(InterruptedException e){
+                   e.printStackTrace() ;
+
+              }
+          }
+      }
 }
