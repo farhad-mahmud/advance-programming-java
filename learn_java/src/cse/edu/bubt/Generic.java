@@ -88,5 +88,6 @@ public class Generic {
         pair3.swap();  // This will successfully swap
         System.out.println("Pair < integer ,integer > (after swap):");
         pair3.display();
+
     }
 }
